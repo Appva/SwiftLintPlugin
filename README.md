@@ -14,7 +14,8 @@
 
 A Swift Package Plugin for [SwiftLint](https://github.com/realm/SwiftLint/) that will run SwiftLint on build time and show errors & warnings in Xcode.
 
-> ⚠️ There now is an official version in the [SwiftLint repo](https://github.com/realm/SwiftLint#plug-in-support)!
+> **Note** 
+> There now is an official version in the [SwiftLint repo](https://github.com/realm/SwiftLint#plug-in-support)!
 
 ## Add to Package
 
@@ -75,6 +76,11 @@ xcodebuild  \
     -skipPackagePluginValidation \ # this is mandatory
     clean build
 ```
+
+If you need to disable linting (for release/app store builds), you can set`DISABLE_SWIFTLINT` environment variable
+
+> **Note**
+> `DISABLE_SWIFTLINT` is currently only available on the `main` branch. Once SwiftLint releases a new version it will be available on that version tag.
 
 -----
 
